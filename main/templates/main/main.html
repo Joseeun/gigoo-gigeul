@@ -1,0 +1,97 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- 메인 헤드 -->
+<header class="masthead bg-main text-white text-start">
+    <div class="container d-flex flex-column">
+        <h1 class="masthead-heading text-uppercase mb-3">환경을 위한</h1>
+        <h1 class="masthead-heading text-uppercase mb-3">우리 모두의 노력</h1>
+        <br>
+        <h6>환경챌린지, 아직 혼자 실행하고 혼자 기록하시나요?</h6>
+        <h6>지금바로 '지구지글'에서 모두와 함께 환경 챌린지를 도전하고 실행해보세요!</h6>
+        <br>
+    </div>
+    <div class="container d-flex">
+        <a class="btn btn-xl btn-outline-main" href="#!">
+            챌린지 시작해보기
+        </a>
+    </div>
+</header>
+<!-- 지구지글 간단 소개 Section-->
+<section class="page-section" id="introduce">
+    <div class="container font-green text-center">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
+        <img height=170 src="{% static 'main/assets/img/지구지글_로고.png' %}">
+        <br><br>
+        <h6 style="display: inline-block;">저희</h6>
+        <h5 style="display: inline-block;">'지구지글'</h6>
+            <h6 style="display: inline-block;">은</h6>
+            <h6>지구가 뜨겁게 불타고 있다는 의미에서 따온 명칭입니다!</h6>
+            <h6>여러분은 하루에 얼마나 많은 환경보호를 실천하고 있나요?</h6>
+            <br>
+            <img src="{% static 'main/assets/img/점.png' %}">
+            <br><br>
+            <img src="{% static 'main/assets/img/점.png' %}">
+            <br><br>
+            <img src="{% static 'main/assets/img/점.png' %}">
+            <br><br>
+            <h4>현재 심각한 전 세계의 환경 문제 !</h4>
+            <br>
+            <img src="{% static 'main/assets/img/쓰레기자료.png' %}">
+            <br><br><br><br>
+            <h4>저희 서비스는</h4>
+            <h4>여러분들의 다양한 환경보호 활동을 지원합니다 !</h4>
+            <br>
+            <img src="{% static 'main/assets/img/제공서비스.png' %}">
+    </div>
+</section>
+<!-- 챌린지 소개 Section-->
+<section class="page-section" id="challenge">
+    <div class="container font-green text-center align-items-center">
+        <h1>#다양한 챌린지</h1>
+        <h6>다양한 챌린지를 통해</h6>
+        <h6>환경 활동 기록도 하고, 포인트도 얻자 !</h6>
+        <br>
+
+        <a class="btn btn-xl btn-outline-light" href="#!">
+            챌린지 시작해보기
+        </a>
+
+    </div>
+</section>
+<!-- 랭킹 소개 Section-->
+<section class="page-section bg-challenge text-white mb-0" id="ranking">
+    <div class="container font-green text-center">
+        <h1>#환경 지킴이 랭킹제공</h1>
+        <h6>다양한 사람들과 함께</h6>
+        <h6>선의의 경쟁을 해보세요 !</h6>
+        <br>
+        <img src="{% static 'main/assets/img/랭킹_임시.png' %}">
+        <br><br><br>
+        <a class="btn btn-xl btn-outline-light" href="#!">
+            랭킹 도전해보기
+        </a>
+    </div>
+</section>
+
+<!-- 퀴즈 소개 Section-->
+<section class="page-section" id="quiz">
+    <div class="container font-green text-center align-items-center">
+        <h1>#환경 퀴즈 제공</h1>
+        <h6>알쏭달쏭 헷갈리는 환경 퀴즈?</h6>
+        <h6>본인의 지식를 확인해보며 포인트도 얻자 !</h6>
+        <br>
+        <img src="{% static 'main/assets/img/메인_퀴즈.png' %}">
+        <br><br><br><br><br>
+
+        <a class="btn btn-xl btn-outline-light" href="#!">
+            나의 정답 확인해보기
+        </a>
+        <br>
+        <br>
+        <h6>정답은 퀴즈 페이지에서 확인해보세요!</h6>
+    </div>
+</section>
+{% endblock %}
