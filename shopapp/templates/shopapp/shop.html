@@ -14,7 +14,6 @@
             <input type="radio" name="slide" id="slide02">
             <input type="radio" name="slide" id="slide03">
             <div class="slidewrap">
-
                 <ul class="slidelist">
                     <!-- 슬라이드 영역 -->
                     <li class="slideitem">
@@ -68,8 +67,9 @@
     <div class="container font-weight-bold ">
         <h4 style=display:inline class="text-start">베스트 아이템 <img src="{% static 'shopapp/img/line1.png' %}"
                 style="vertical-align:middle;"></h4>
-        <h6 style=display:inline class="text-start"> &ensp; 많은 사람들이 선택한 인기 아이템을 만나보세요!</h6>
+        <h6 style=display:inline class="text-start "> &ensp; 많은 사람들이 선택한 인기 아이템을 만나보세요!</h6>
         <img src="{% static 'shopapp/img/line2.png' %}">
+        
         <div class="tab_content text-center">
             <!-- 버튼요소 -->
             <input type="radio" name="tabmenu" id="tab01" checked>
@@ -169,12 +169,82 @@
 <section class="page-section mb-0" id="iconshop">
     <div class="container text-center">
         <img width=1000 src="{% static 'shopapp/img/아이콘샵.png' %}">
+        <br><br><br>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/badge/지구뱃지.png' %}"></div>
+            <div class="product-name">지구지킴이 뱃지</div>
+            <div class="product-price">100</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/badge/왕관뱃지.png' %}"></div>
+            <div class="product-name">나는야 환경왕 뱃지</div>
+            <div class="product-price">200</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/badge/나뭇잎뱃지.png' %}"></div>
+            <div class="product-name">그린그린 뱃지</div>
+            <div class="product-price">100</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <br>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/badge/숲속뱃지.png' %}"></div>
+            <div class="product-name">숲속요정 뱃지</div>
+            <div class="product-price">150</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/badge/북극곰뱃지.png' %}"></div>
+            <div class="product-name">북극곰 뱃지</div>
+            <div class="product-price">100</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/badge/쓱싹뱃지.png' %}"></div>
+            <div class="product-name">쓱싹쓱싹 뱃지</div>
+            <div class="product-price">150</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
     </div>
 </section></body>
 <body id="fontshop">
 <section class="page-section mb-0" id="fontshop">
     <div class="container text-center">
-        <img width=800 src="{% static 'shopapp/img/폰트샵.png' %}">
+        <img width=1000 src="{% static 'shopapp/img/폰트 샵.png' %}">
+        <br><br><br>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/txt/너만을비춤.png' %}"></div>
+            <div class="product-name">너만을 비춤체</div>
+            <div class="product-price">300</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/txt/함박눈.png' %}"></div>
+            <div class="product-name">함박눈체</div>
+            <div class="product-price">300</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/txt/메이플.png' %}"></div>
+            <div class="product-name">메이플스토리체</div>
+            <div class="product-price">300</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <br>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/txt/둥근모꼴.png' %}"></div>
+            <div class="product-name">둥근모꼴체</div>
+            <div class="product-price">300</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
+        <li class="cell">
+            <div><img height=130 src="{% static 'shopapp/img/txt/쿠키런.png' %}"></div>
+            <div class="product-name">쿠키런체</div>
+            <div class="product-price">300</div>
+            <div class="btn btn-outline-light " width=50  href="#!">구매</div>
+        </li>
     </div>
 </section></body>
 <body id="challengeshop">
@@ -214,5 +284,7 @@
             <div class="btn btn-outline-light " width=50  href="#!">구매</div>
         </li>
     </div>
+    
+    
 </section></body>
 {% endblock %}

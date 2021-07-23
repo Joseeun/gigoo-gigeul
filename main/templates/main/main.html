@@ -2,18 +2,26 @@
 {% load static %}
 
 {% block content %}
-
+<div style="position:absolute; z-index: -3;">
+    <img class=img-fluid style="height: auto;" src="{% static 'main/assets/main헤더.png'' %}" alt="..." /></a>
+</div>
 <!-- 메인 헤드 -->
 <header class="masthead bg-main text-white text-start">
-    <div class="container d-flex flex-column">
-        <h1 class="masthead-heading text-uppercase mb-3">환경을 위한</h1>
-        <h1 class="masthead-heading text-uppercase mb-3">우리 모두의 노력</h1>
-        <br>
+    <div class="container flex-column float:left;">
+        <img class=img-fluid style="width: 500px;" src="{% static 'main/assets/img/메인 소개.png' %}">
+        <br><br>
         <h6>환경챌린지, 아직 혼자 실행하고 혼자 기록하시나요?</h6>
-        <h6>지금바로 '지구지글'에서 모두와 함께 환경 챌린지를 도전하고 실행해보세요!</h6>
-        <br>
+        <h6>지금바로 '지구지글'에서 모두와 함께 환경 챌린지를 도전하고 실행해보세요.</h6>
+        <br><br><br>
+        <img style="width: 100px; float: left; vertical-align:middle; padding-right: 5px;" src="{% static 'main/assets/img/인원수.png' %}">
+        <p style="float: left;" class="userintro"><b>&nbsp;지금까지&nbsp;&nbsp;</b></p>
+        <div style="width: 100px; height: 25px; float: left;" class="usercount">0 👤 &nbsp;</div><p style="float: left;" class="userintro"><b>&nbsp;분과</b></p>
+        <br><br>
+        <p style="float: left;"class="userintro"><b>&nbsp;함께&nbsp;&nbsp;</b></p><div style="width: 120px; height: 25px; float: left;" class="usercount">0 ✍&nbsp;</div><p style="float: left;" class="userintro">
+            <b>&nbsp;개의 챌린지를 하였습니다.</b></p>
+        <br><br>
     </div>
-    <div class="container d-flex">
+    <div class="container">
         <a class="btn btn-xl btn-outline-main" href="#!">
             챌린지 시작해보기
         </a>
@@ -24,7 +32,7 @@
     <div class="container font-green text-center">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
         <img height=170 src="{% static 'main/assets/img/지구지글_로고.png' %}">
-        <br><br>
+        <br>
         <h6 style="display: inline-block;">저희</h6>
         <h5 style="display: inline-block;">'지구지글'</h6>
             <h6 style="display: inline-block;">은</h6>
@@ -39,12 +47,12 @@
             <br><br>
             <h4>현재 심각한 전 세계의 환경 문제 !</h4>
             <br>
-            <img src="{% static 'main/assets/img/쓰레기자료.png' %}">
+            <img class=img-fluid src="{% static 'main/assets/img/쓰레기자료.png' %}">
             <br><br><br><br>
             <h4>저희 서비스는</h4>
             <h4>여러분들의 다양한 환경보호 활동을 지원합니다 !</h4>
             <br>
-            <img src="{% static 'main/assets/img/제공서비스.png' %}">
+            <img class=img-fluid src="{% static 'main/assets/img/제공서비스.png' %}">
     </div>
 </section>
 <!-- 챌린지 소개 Section-->
@@ -54,12 +62,68 @@
         <h6>다양한 챌린지를 통해</h6>
         <h6>환경 활동 기록도 하고, 포인트도 얻자 !</h6>
         <br>
-
+        <section>
+            <div class="rt-container">
+                  <div class="col-rt-12">
+                      <div class='demo-container'>
+                          <div class='carousel'>
+                            <input checked='checked' class='carousel__activator' id='carousel-slide-activator-1' name='carousel' type='radio'>
+                            <input class='carousel__activator' id='carousel-slide-activator-2' name='carousel' type='radio'>
+                            <input class='carousel__activator' id='carousel-slide-activator-3' name='carousel' type='radio'>
+                            <div class='carousel__controls'>
+                              <label class='carousel__control carousel__control--forward' for='carousel-slide-activator-2'>
+                                👉
+                              </label>
+                            </div>
+                            <div class='carousel__controls'>
+                              <label class='carousel__control carousel__control--backward' for='carousel-slide-activator-1'>
+                                👈
+                              </label>
+                            </div>
+                            <div class='carousel__screen'>
+                              <div class='carousel__track'>
+                                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                    <img style="width: 300px;" src="{% static 'main/assets/challenge/따릉이챌린지.png' %}">
+                                </div>
+                                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                  <div class='demo-content'>
+                                    <img style="width: 300px;" src="{% static 'main/assets/challenge/아나바다챌린지.png' %}">
+                                  </div>
+                                </div>
+                                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                  <div class='demo-content'>
+                                    <img style="width: 300px;" src="{% static 'main/assets/challenge/용기내챌린지.png' %}">
+                                  </div>
+                                </div>
+                                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                  <div class='demo-content'>
+                                    <img style="width: 300px;" src="{% static 'main/assets/challenge/이면지챌린지.png' %}">
+                                  </div>
+                                </div>
+                                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                  <div class='demo-content'>
+                                    <img style="width: 300px;" src="{% static 'main/assets/challenge/텀블러챌린지.png' %}">
+                                  </div>
+                                </div>
+                                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                  <div class='demo-content'>
+                                    <img style="width: 300px;" src="{% static 'main/assets/challenge/환경표지챌린지.png' %}">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <br>
         <a class="btn btn-xl btn-outline-light" href="#!">
             챌린지 시작해보기
         </a>
 
     </div>
+    
 </section>
 <!-- 랭킹 소개 Section-->
 <section class="page-section bg-challenge text-white mb-0" id="ranking">
@@ -68,7 +132,11 @@
         <h6>다양한 사람들과 함께</h6>
         <h6>선의의 경쟁을 해보세요 !</h6>
         <br>
-        <img src="{% static 'main/assets/img/랭킹_임시.png' %}">
+        <img style=padding:10px; height=320 src="{% static 'main/assets/랭킹/닉네임a.png' %}">
+        
+        <img style=padding:10px; height=320 src="{% static 'main/assets/랭킹/닉네임b.png' %}">
+        
+        <img style=padding:10px; height=320 src="{% static 'main/assets/랭킹/닉네임c.png' %}">
         <br><br><br>
         <a class="btn btn-xl btn-outline-light" href="#!">
             랭킹 도전해보기
@@ -83,7 +151,7 @@
         <h6>알쏭달쏭 헷갈리는 환경 퀴즈?</h6>
         <h6>본인의 지식를 확인해보며 포인트도 얻자 !</h6>
         <br>
-        <img src="{% static 'main/assets/img/메인_퀴즈.png' %}">
+        <img class=img-fluid src="{% static 'main/assets/img/메인_퀴즈.png' %}">
         <br><br><br><br><br>
 
         <a class="btn btn-xl btn-outline-light" href="#!">
