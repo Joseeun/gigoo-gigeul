@@ -1,10 +1,13 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}" />
+{% endblock css %}
+
 {% block content %}
-<div style="position:absolute; z-index: -3;">
-    <img class=img-fluid style="height: auto;" src="{% static 'main/assets/main헤더.png'' %}" alt="..." /></a>
-</div>
+
 <!-- 메인 헤드 -->
 <header class="masthead bg-main text-white text-start">
     <div class="container flex-column float:left;">
