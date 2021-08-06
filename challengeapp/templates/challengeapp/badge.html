@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %} 
+{% load static %} 
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/badge.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/common.css' %}"/>
+{% endblock css %} 
+
+{% block content %} 
+
+<style>
+    * {
+        font-family: 'NanumSquareRound' !important;
+    }
+
+</style>
+
+
+<section class="page-section container font-green text-center" id="challenge">
+    <div class>
+        <article class>
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
+            </div>
+        </article>
+
+        <article class="my-content-article">
+            <div class="container">
+                <div class>
+                    <div class="bad-title">
+                        <h3>BADGE</h3>
+                    </div>
+
+                <div class="container my-content clearfix">
+                    <div class="bad-img">
+                        <img class="badge-img1" src="{% static 'challengeapp/img/badge.png' %}" alt="?">
+                        <img class="badge-img2" src="{% static 'challengeapp/img/badge2.png' %}" alt="?">
+                    </div>
+                    <div class="container bad-content-b">
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- mypage, badge, activity가 사용하는 aside -->
+        <article class="aside-article">
+            <div class="my-aside">
+                <div class="my">
+                    <img class="aside-profile" src="{% static 'challengeapp/img/profile.png' %}" alt="{{user.nickname}}">
+                    <p class="my-aside-p">{{ user.nickname }}user.nickname</p>
+                </div>
+                <hr class="my-aside-hr">
+                <div class="my-aside-b">
+                    <button type="button" class="my-aside-btn">Profile</button>
+                    <button type="button" class="my-aside-btn">Quiz note</button>
+                    <button type="button" class="my-aside-btn">Badge</button>
+                    <button type="button" class="my-aside-btn">Activity</button>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+{% endblock %}

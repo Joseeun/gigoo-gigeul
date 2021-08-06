@@ -1,0 +1,100 @@
+{% extends 'main/base.html' %} 
+{% load static %} 
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/newpost.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/mypage.css' %}"/>
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/common.css' %}"/> -->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/common.css' %}"/> -->
+{% endblock css %} 
+
+{% block content %} 
+
+<style>
+    * {
+        font-family: 'NanumSquareRound' !important;
+    }
+    hr{
+        width: 191px;
+    }
+
+</style>
+
+
+<section class="page-section container font-green text-center" id="challenge">
+    <div class>
+        <article class>
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
+            </div>
+        </article>
+
+        <article class="new-content-article">
+            <div class="container">
+                <div class>
+                    <div class="title">
+                        <h1 class="new-title">NEW POST</h1>
+                    </div>    
+                        <!-- 드롭다운 -->
+                    <div>
+                        <p class="drop-p">Challenge</p>
+                    </div>
+                    <div class="container dropdown drop">
+                            <button class="dropbtn btn btn-default dropdown-toggle">my activity</button>
+                            <div class="dropdown-content">
+                            {% for activity in activity.all %}
+                            <a href="{% url 'mysearch' activity.id %}">{{ activity.name }}</a>
+                            {% endfor %}
+                    </div>
+                    <hr>
+                    </div>
+
+                <div class="container new-content clearfix">
+                    <div class="container new-content-b">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="new-img">
+                                <img class="new-img1" src="{% static 'challengeapp/img/newpost.png' %}" alt="?">
+                                <!-- <img class="new-img2" src="{% static 'challengeapp/img/badge2.png' %}" alt="?"> -->
+                                <input type="file" class="file new-file"> 
+
+                            </div>
+                            <div>
+                                <br>
+                                <p><mark>제목</mark></p>
+                                <textarea class="new-text" placeholder="내용을 입력해주세요" cols="50" rows="2"></textarea>
+                                <p><mark>내용</mark></p>
+                                <textarea class="new-text" placeholder="내용을 입력해주세요" cols="50" rows="20"></textarea>
+                                <p><mark>날짜</mark></p>
+                                <textarea class="new-text" placeholder="내용을 입력해주세요" cols="50" rows="2"></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+        <!-- mypage, badge, activity가 사용하는 aside -->
+        <!-- <article class="aside-article">
+            <div class="my-aside">
+                <div class="my">
+                    <img class="aside-profile" src="{% static 'challengeapp/img/profile.png' %}" alt="{{user.nickname}}">
+                    <p class="my-aside-p">{{ user.nickname }}user.nickname</p>
+                </div>
+                <hr class="my-aside-hr">
+                <div class="my-aside-b">
+                    <button type="submit" class="my-aside-btn">Profile</button>
+                    <button type="submit" class="my-aside-btn">Quiz note</button>
+                    <button type="submit" class="my-aside-btn">Badge</button>
+                    <button type="submit" class="my-aside-btn">Activity</button>
+                </div>
+            </div>
+        </article> -->
+    </div>
+</section>
+
+
+{% endblock %}

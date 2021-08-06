@@ -1,0 +1,77 @@
+{% extends 'main/base.html' %} 
+{% load static %} 
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/addch.css' %}"/>
+{% endblock css %} 
+
+{% block content %} 
+
+<style>
+    * {
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+    }
+</style>
+
+<section class="page-section container font-green text-center" id="challenge">
+    <div class>
+        <article class>
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
+            </div>
+        </article>
+
+        <article class>
+            <div class="container">
+                <form method="POST">
+                    {% csrf_token %}
+                    <table class="table-center">
+                        <tr>
+                        <th class="add-th">제목</th>
+                            <td class="add-td"><input id="id" type="text" class="add-title add-input" placeholder="챌린지의 이름을 적어주세요"></td>
+
+                        </tr>
+                        <tr>
+                        <th class="add-th">내용</th>
+                            <td class="add-td"><textarea rows="20" cols="100" placeholder="챌린지의 내용을 적어주세요(참여 방법, 목적, 인증 방법 등)"></textarea></td>
+
+                        </tr>
+                        <tr>
+                        <th class="add-th">대표사진</th>
+                            <td width: 875px; height: 330px; class="p-img add-td">
+                                {% if challenge.image %} 
+                                {{challenge.image}}
+                                {% else %} 
+                                <img src="{% static 'challengeapp/img/addchallenge-p.png' %}" margin="793px" >
+                                {% endif %}
+                                <input type="file" class="file add-input"> 
+                            </td>
+                        </tr>
+                        <tr>
+                        <th class="add-th">기간</th>
+                            <td class="add-td">
+                                <input type="checkbox" value="2주" class="check add-input">2주
+                                <input type="checkbox" value="1개월" class="check add-input">1개월
+                                <input type="checkbox" value="3개월" class="check add-input">3개월
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button type="submit" class="add-btn">작성</button>
+                    <!-- <button type="submit" class="add-btn">미리보기</button>
+                    <button type="submit" class="add-btn">임시저장</button> -->
+                    <button type="submit" class="add-btn">취소</button>
+                </form>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+{% endblock %}

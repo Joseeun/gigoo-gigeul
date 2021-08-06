@@ -1,0 +1,98 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/list.css' %}" />
+{% endblock css %}
+
+{% block content %}
+<section class="page-section" id="allchallenge">
+  <div class="container text-center">
+    <h2 class="page-section-heading "></h2>
+
+    <img height=100 src="{% static 'main/assets/img/지구지글_로고.png' %}">
+    <div class="container">
+
+      <div class="dropdown">
+        <button class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▼</button>
+        <div class="dropdown-content">
+          <a href="#">#일회용품</a>
+          <a href="#">#대기오염</a>
+          <a href="#">#산림보호</a>
+        </div>
+      </div>
+
+
+      <input type="text" class="input" placeholder="챌린지 이름을 입력하세요">
+      <input type="button" value="search" class="close-btn">
+      <input type="button" value="+" class="plus-btn">
+    </div>
+    <br><br>
+
+
+
+
+    <div class="section">
+      
+      <ul class="list img-list">
+        <li class=list-border>
+          <a class="inner">
+            <div class="li-img">
+              <img src="{% static 'challengeapp/img/용기소개.png' %}" alt="..." />
+            </div>
+            <div class="li-text">
+              <h4 class="li-head">용기내 챌린지</h4>
+              <div class="li-sub">
+                <p>음식 포장으로 발생하는 불필요한 쓰레기를 줄이기 위해 <br>
+                  다회용기 등에 음식을 포장해 오는 운동</p>
+                  <p><span class="label">#환경</span><span class="label">#일회용품</span><span class="label">#생활 속</span></p>
+              </div>
+              <button type="button" class="btn-challenge li-btn" style="float: right;" href="#!">참여하기</button>
+              <button type="button" class="btn-usercount li-btn" style="float: right;" href="#!">N명 참여중</button>
+            </div>
+          </a>
+        </li>
+        <li class=list-border>
+          <a class="inner">
+            <div class="li-img">
+              <img src="{% static 'challengeapp/img/텀블소개.png' %}" alt="..." />
+            </div>
+            <div class="li-text">
+              <h4 class="li-head">텀블러 챌린지</h4>
+              <div class="li-sub">
+                <p>종이, 플라스틱 컵의 무분별한 소비를 막기위해 <br>
+                  텀블러를 가지고 다니며 사용하는 운동</p>
+                  <p><span class="label">#환경</span><span class="label">#일회용품</span><span class="label">#생활 속</span></p>
+              </div>
+              <button type="button" class="btn-challenge li-btn" style="float: right;" href="#!">참여하기</button>
+              <button type="button" class="btn-usercount li-btn" style="float: right;" href="#!">N명 참여중</button>
+            </div>
+          </a>
+        </li>
+        <li class=list-border>
+          <a class="inner">
+            <div class="li-img">
+              <img src="{% static 'challengeapp/img/이면소개.png' %}" alt="..." />
+            </div>
+            <div class="li-text">
+              <h4 class="li-head">이면지 챌린지</h4>
+              <div class="li-sub">
+                <p>새로운 공책, 노트가 아닌 원래 사용했던 이면지를 이용해<br>
+                  자원을 아끼며 필기하는 운동</p>
+                  <p><span class="label">#환경</span><span class="label">#산림보호</span><span class="label">#생활 속</span></p>
+              </div>
+              <button type="button" class="btn-challenge li-btn" style="float: right;" href="#!">참여하기</button>
+              <button type="button" class="btn-usercount li-btn" style="float: right;" href="#!">N명 참여중</button>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+
+
+</section>
+{% endblock %}

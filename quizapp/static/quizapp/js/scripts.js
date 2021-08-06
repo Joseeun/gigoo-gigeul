@@ -1,56 +1,50 @@
-/*!
-* Start Bootstrap - Freelancer v7.0.3 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
-    };
-
-    // Shrink the navbar 
-    navbarShrink();
-
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 72,
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
+$('#quiz').quiz({
+  //resultsScreen: '#results-screen',
+  //counter: false,
+  //homeButton: '#custom-home',
+  counterFormat: 'Question %current of %total',
+  questions: [
+    {
+      'q': 'Is jQuery required for this plugin?',
+      'options': [
+        'Yes',
+        'No'
+      ],
+      'correctIndex': 0,
+      'correctResponse': 'Good job, that was obvious.',
+      'incorrectResponse': 'Well, if you don\'t include it, your quiz won\'t work'
+    },
+    {
+      'q': 'How do you use it?',
+      'options': [
+        'Include jQuery, that\'s it!',
+        'Include jQuery and the plugin javascript.',
+        'Include jQuery, the plugin javascript, the optional plugin css, required markup, and the javascript configuration.'
+      ],
+      'correctIndex': 2,
+      'correctResponse': 'Correct! Sounds more complicated than it really is.',
+      'incorrectResponse': 'Come on, it\'s not that easy!'
+    },
+    {
+      'q': 'The plugin can be configured to require a perfect score.',
+      'options': [
+        'True',
+        'False'
+      ],
+      'correctIndex': 0,
+      'correctResponse': 'You\'re a genius! You just set allowIncorrect to true.',
+      'incorrectResponse': 'Why you have no faith!? Just set allowIncorrect to true.'
+    },
+    {
+      'q': 'How do you specify the questions and answers?',
+      'options': [
+        'MySQL database',
+        'In the HTML',
+        'In the javascript configuration'
+      ],
+      'correctIndex': 2,
+      'correctResponse': 'Correct! Refer to the documentation for the structure.',
+      'incorrectResponse': 'Wrong! Do it in the javascript configuration. You might need to read the documentation.'
+    }
+  ]
 });
-
-

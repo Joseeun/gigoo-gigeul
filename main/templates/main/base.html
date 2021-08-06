@@ -38,7 +38,9 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                             href="{% url 'quiz' %}">QUIZ</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-4 px-0 px-lg-3" href="#!"><img
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-4 px-0 px-lg-3" 
+                        href="{% url 'allchallengeandsearch' %}">
+                        <img
                                 src="{% static 'main/assets/img/navbar/Search.png' %}" alt="..." /></a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
@@ -46,7 +48,7 @@
                         <a href="{% url 'editinfo' %}" class="nav-link py-4 px-0 px-lg-3 rounded"><img
                                 src="{% static 'main/assets/img/navbar/mypage.png' %}" alt="..." /></a>
                         {% else %}
-                        <a href="{% url 'signin' %}" class="nav-link py-4 px-0 px-lg-3 rounded"><img
+                        <a href=#! class="nav-link py-4 px-0 px-lg-3 rounded"><img
                                 src="{% static 'main/assets/img/navbar/mypage.png' %}" alt="..." /></a>
                         {% endif %}
                     </li>
@@ -55,7 +57,7 @@
                         <a href="{% url 'logout' %}"
                             class="nav-link py-3 px-0 px-lg-2 py-lg-3 rounded btn btn-signup btn-outline-main">로그아웃</a>
                         {% else %}
-                        <a href="{% url 'signin' %}"
+                        <a href=#!
                             class="nav-link py-3 px-0 px-lg-2 py-lg-3 rounded btn btn-signup btn-outline-main">로그인</a>
                         {% endif %}
                     </li>
@@ -64,7 +66,7 @@
         </div>
     </nav>
 
-    <div style="position:fixed; bottom:50px; right:50px;">
+    <div style="position:fixed; bottom:50px; right:50px; z-index: 20;">
         <a href="#page-top"><img height=100 src="{% static 'main/assets/img/navbar/top버튼.png'' %}" alt="..." /></a>
     </div>
 

@@ -1,0 +1,65 @@
+{% extends 'main/base.html' %} 
+{% load static %} 
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/detailch.css' %}" />
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/mypage.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/common.css' %}"/> -->
+{% endblock css %} 
+
+{% block content %} 
+
+<style>
+    * {
+        font-family: 'NanumSquareRound' !important;
+    }
+
+    .container {
+        width: 100%
+    }
+</style>
+
+
+<section class="page-section container font-green text-center" id="challenge">
+    <div class>
+        <article class="container">
+            <div class>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
+            </div>
+            <div class="de-title-img-b">
+                {{ activity.activity_img }}
+                <img class="de-img" src="{% static 'challengeapp/img/용기내.png' %}" alt="?">
+            </div>
+            <div class="de-title-b">
+                <p class="de-h">{{challenge.challenge_name}}challenge_name</p>
+                <br>
+                <p class="de-b">challenge_introduction</p>
+                <br>
+                <button type="submit" class="de-title-btn">활동 추가하기</button>
+            </div>
+            
+        </article>
+
+        <article class="de-content-article container">
+            <div class="de-content de-aside-b">
+                <div class="de-aside">
+                    <button type="button" class="de-aside-btn">About</button>
+                    <button type="button" class="de-aside-btn">My challenge</button>
+                    <button type="button" class="de-aside-btn">Ranking</button>
+                </div> 
+            </div>   
+
+            <div class="de-img-b">
+                <!-- <img class src="{% static 'challengeapp/img/mypage-tree.png' %}" alt="tree"> -->
+            </div>
+
+
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+{% endblock %}

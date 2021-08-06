@@ -2,7 +2,7 @@ from django.urls import path, include
 from challengeapp import views
 
 urlpatterns = [
-    path('addchallengeandsearch/', views.addchallengeandsearch, name='addchallengeandsearch'),
+    path('allchallengeandsearch/', views.allchallengeandsearch, name='allchallengeandsearch'),
     path('addchallenge/', views.addchallenge, name='addchallenge'),
     path('detailchallenge/', views.detailchallenge, name='detailchallenge'),
     path('activity/', views.activity, name='activity'),

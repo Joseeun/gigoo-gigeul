@@ -1,0 +1,188 @@
+{% extends 'main/base.html' %} 
+{% load static %} 
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/activity.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'challengeapp/css/common.css' %}"/>
+{% endblock css %} 
+
+{% block content %} 
+
+<style>
+    * {
+        font-family: 'NanumSquareRound' !important;
+    }
+
+    ul {
+      padding-left: unset;
+    }
+
+</style>
+
+
+<section class="page-section container font-green text-center" id="challenge">
+    <div class>
+        <article class>
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h2>
+            </div>
+        </article>
+
+        <article class="act-content-article container">
+            <div class="my-content">
+                <div class="act-title">
+                  <div class="act-img-b">
+                    {{ activity.activity_img }}
+                    <img class="act-img" src="{% static 'challengeapp/img/badge.png' %}" alt="?">
+                    <div class="act-exp">
+                      <h4>{{challenge.challenge_name}}challenge_name</h4>
+                      <p>{{activity.activity_date}}activity_date</p>
+                    </div>
+                    
+                  </div>
+                </div>
+                <hr class="act-hr">
+            </div>
+            
+        </article>
+
+        
+        
+        <article class="my-content-article">
+          <div class="container my-content clearfix">
+            <div class="act-content-b">
+              <div class="section container px-4 px-lg-5">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+                <div class="slide-wrap">
+                  <ul class="slidelist">
+                    <li>
+                      <a>
+                        <label for="slide03" class="left"></label>
+                        <div class="textbox">
+                          <h3>첫번째 슬라이드</h3>
+                          <p>첫번째 슬라이드 입니다. 그럼 이제 테스트를 해보겠습니다. 송축해 내영혼 내영혼아 완전하신 이름. 이전에 없었던 노래로!~~~ 그날에  나의 힘닳아 나의 삶에 여정 바칠때 끝없는 찬양 드리리라 수많은 세월지나 영원히 !!!! 송축해 내영혼 내 영혼아 거룩하신 이름 이전에 없었던 노래로 나 주님을 경배해</p>
+                        </div>
+                        <img src="{% static 'challengeapp/img/pasta.png' %}">
+                        <label for="slide02" class="right"></label>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <label for="slide01" class="left"></label>
+                        <div class="textbox">
+                          <h3>두번째 슬라이드</h3>
+                          <p>두번째 슬라이드 입니다. 성령이 계시네 할렐루야 함께 하시네 좁은 길을 걸으며 밤낮 기뻐하는것 주의 영이 함께 함이라 참된 평화얻으니 주의 영이 함께 함이라</p>
+                        </div>
+                        <img src="{% static 'challengeapp/img/pasta.png' %}">
+                        <label for="slide03" class="right"></label>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <label for="slide02" class="left"></label>
+                        <div class="textbox">
+                          <h3>세번째 슬라이드</h3>
+                          <p>세번째 슬라이드 입니다. 늘 보호 해주실 것을 나는 확실히 아네. 하나님의 은혜로 이 쓸데없는 자 왜 구속하여 주는 지 난 알 수 없도다 내가 믿고또 의지함은 내 모든 형편 아시는 주님 늘 보호 해주실 것을 나는 확실히 아네</p>
+                        </div>
+                        <img src="{% static 'challengeapp/img/pasta.png' %}">
+                        <label for="slide01" class="right"></label>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </article>
+
+
+        <!-- <article class="my-content-article">
+            <div class="container">
+                <div class="container my-content clearfix">
+                    <div class="container act-content-b rt-container">
+                      <div class="col-rt-12">
+                        <div class='demo-container'>
+                            <div class='carousel'>
+                              <input checked='checked' class='carousel__activator' id='carousel-slide-activator-1' name='carousel' type='radio'>
+                              <input class='carousel__activator' id='carousel-slide-activator-2' name='carousel' type='radio'>
+                              <input class='carousel__activator' id='carousel-slide-activator-3' name='carousel' type='radio'>
+                              <div class='carousel__controls'>
+                                <label class='carousel__control carousel__control--forward' for='carousel-slide-activator-2'>
+                                  <img class="act-r" src="{% static 'challengeapp/img/act-r.png' %}" alt="arrow">
+                                </label>
+                              </div>
+                              <div class='carousel__controls'>
+                                <label class='carousel__control carousel__control--backward' for='carousel-slide-activator-1'>
+                                  <img class="act-l" src="{% static 'challengeapp/img/act-l.png' %}" alt="arrow">
+                                </label>
+                              </div>
+                              <div class='carousel__screen'>
+                                <div class='carousel__track'>
+                                  <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                      <img class="act-imgs" src="{% static 'challengeapp/img/profile.png' %}">
+                                  </div>
+                                  <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                    <div class='demo-content'>
+                                      <img class="act-imgs" src="{% static 'challengeapp/img/profile.png' %}">
+                                    </div>
+                                  </div>
+                                  <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                    <div class='demo-content'>
+                                      <img class="act-imgs" src="{% static 'challengeapp/img/profile.png' %}">
+                                    </div>
+                                  </div>
+                                  <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                    <div class='demo-content'>
+                                      <img class="act-imgs" src="{% static 'challengeapp/img/profile.png' %}">
+                                    </div>
+                                  </div>
+                                  <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                    <div class='demo-content'>
+                                      <img class="act-imgs" src="{% static 'challengeapp/img/profile.png' %}">
+                                    </div>
+                                  </div>
+                                  <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                                    <div class='demo-content'>
+                                      <img class="act-imgs" src="{% static 'challengeapp/img/profile.png' %}">
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                        
+                  </div>
+                </div>
+            </div>
+        </article> -->
+
+        <!-- mypage, badge, activity가 사용하는 aside -->
+        <article class="aside-article">
+            <div class="my-aside">
+                <div class="my">
+                    <img class="aside-profile" src="{% static 'challengeapp/img/profile.png' %}" alt="{{user.nickname}}">
+                    <p class="my-aside-p">{{ user.nickname }}user.nickname</p>
+                </div>
+                <hr class="my-aside-hr">
+                <div class="my-aside-b">
+                    <button type="button" class="my-aside-btn">Profile</button>
+                    <button type="button" class="my-aside-btn">Quiz note</button>
+                    <button type="button" class="my-aside-btn">Badge</button>
+                    <button type="button" class="my-aside-btn">Activity</button>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+{% endblock %}
